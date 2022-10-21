@@ -9,12 +9,14 @@ import { ButtonBase } from '@mui/material';
 // eslint-disable-next-line no-unused-vars
 import Logo from './Logo';
 import config from 'config';
+import { Typography } from '../../../node_modules/@mui/material/index';
 
 // ==============================|| MAIN LOGO ||============================== //
 
 const LogoSection = ({ sx, to }) => (
     <ButtonBase disableRipple component={Link} to={!to ? config.defaultPath : to} sx={sx}>
         <Logo />
+        <Typography>Admin App</Typography>
     </ButtonBase>
 );
 
