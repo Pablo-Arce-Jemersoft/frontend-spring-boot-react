@@ -26,6 +26,7 @@ import ReportAreaChart from './ReportAreaChart';
 import SalesColumnChart from './SalesColumnChart';
 import MainCard from 'components/MainCard';
 import AnalyticEcommerce from 'components/cards/statistics/AnalyticEcommerce';
+import NewOrder from './NewOrder';
 
 // assets
 import { GiftOutlined, MessageOutlined, SettingOutlined } from '@ant-design/icons';
@@ -76,7 +77,7 @@ const DashboardDefault = () => {
     return (
         <Grid container rowSpacing={4.5} columnSpacing={2.75}>
             {/* row 1 */}
-            <Grid item xs={12} md={7} lg={10}>
+            <Grid item xs={12} md={7} lg={8}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
                         <Typography variant="h5">Recent Orders</Typography>
@@ -87,31 +88,17 @@ const DashboardDefault = () => {
                     <OrdersTable />
                 </MainCard>
             </Grid>
-            {/* <Grid item xs={12} md={5} lg={4}>
+            <Grid item xs={12} md={5} lg={4}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
-                        <Typography variant="h5">Analytics Report</Typography>
+                        <Typography variant="h5">Create Order</Typography>
                     </Grid>
                     <Grid item />
                 </Grid>
-                <MainCard sx={{ mt: 2 }} content={false}>
-                    <List sx={{ p: 0, '& .MuiListItemButton-root': { py: 2 } }}>
-                        <ListItemButton divider>
-                            <ListItemText primary="Company Finance Growth" />
-                            <Typography variant="h5">+45.14%</Typography>
-                        </ListItemButton>
-                        <ListItemButton divider>
-                            <ListItemText primary="Company Expenses Ratio" />
-                            <Typography variant="h5">0.58%</Typography>
-                        </ListItemButton>
-                        <ListItemButton>
-                            <ListItemText primary="Business Risk Cases" />
-                            <Typography variant="h5">Low</Typography>
-                        </ListItemButton>
-                    </List>
-                    <ReportAreaChart />
+                <MainCard sx={{ mt: 2, height: 550, diaplay: 'flex', overflowY: 'auto' }}>
+                    <NewOrder />
                 </MainCard>
-            </Grid> */}
+            </Grid>
 
             {/* row 2 */}
             <Grid item xs={12} md={7} lg={8}>
